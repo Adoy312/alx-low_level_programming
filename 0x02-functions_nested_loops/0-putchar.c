@@ -1,15 +1,19 @@
 #include "main.h"
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	char *sh = "Putchar";
 
-void print_alphabet(void);
+	while (*sh)
+	{
+		_putchar(*sh);
+		sh++;
+	}
+	_putchar('\n');
 
-
-int main(void){
-         int c;
-
-         for (c = 'a'; c<= 'z'; c++)
-                 _putchar(c);
-
-
-         _putchar("\n");
-         return 0;
+	return (0);
 }
