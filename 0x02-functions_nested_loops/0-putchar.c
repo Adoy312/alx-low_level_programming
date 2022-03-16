@@ -1,19 +1,22 @@
 #include "main.h"
+
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * main - print out main car by char
+ * Description: uses the main header file
+ * that contains the function _putchar
+ * Return: 0.
  */
+
 int main(void)
 {
-	char *sh = "Holberton";
+char str[] = "_putchar";
+int i;
 
-	while (*sh)
-	{
-		_putchar(*sh);
-		sh++;
-	}
-	_putchar('\n');
-
-	return (0);
+i=0;
+while (str[i])
+{_putchar(str[i]);
+++i;
+}
+_putchar('\n');
+return (0);
 }
