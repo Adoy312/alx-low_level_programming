@@ -1,24 +1,35 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 /**
-* puts2 - prints one char out of 2 of a string
-* followed by a new line
-* @str: string to print the chars from
-*/
-void puts2(char *str)
+ * main - program that generates random valid
+ * passwords for the program 101-crackme
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-	int len, i;
+	int pass[100];
+	int i, sum, n;
 
-	len = 0;
+	sum = 0;	
 
-	while (str[len] != '\0')
+	srand(time(NULL));
+
+	for (i = 0; i < 100; i++)
 	{
-		len++;
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
 	}
 
-	for (i = 0; i < len; i += 2)
-	{
-		_putchar(str[i]);
-	}
-
-	_putchar('\n');
+	return (0);
 }
