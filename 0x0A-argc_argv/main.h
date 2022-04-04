@@ -1,7 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int _putchar(char c);
-int _atoi(char *s);
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char **argv);
+int checker(char *c);
 
-#endif
+endif
