@@ -6,4 +6,4 @@
 int main(int argc, char **argv);
 int checker(char *c);
 
-endif
+#endif
